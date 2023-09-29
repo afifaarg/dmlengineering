@@ -1,0 +1,89 @@
+::-webkit-scrollbar {
+    width: 0em; /* Adjust as needed */
+    height: 0em; /* Adjust as needed */
+  }
+  
+  /* Style of the scrollbar track (the empty space) */
+  ::-webkit-scrollbar-track {
+    background-color: transparent; /* Transparent track */
+  }
+  
+  /* Style of the scrollbar thumb (the draggable part) */
+  ::-webkit-scrollbar-thumb {
+    background-color: transparent; /* Transparent thumb */
+    border-radius: 0; /* Remove rounded corners */
+  }
+  
+  /* Style of the scrollbar thumb on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: transparent; /* Transparent thumb on hover */
+  }
+
+/*font*/
+body {
+    font-family: 'Poppins', sans-serif;
+}
+nav a:hover {
+    color: #fff91e; /* Change to the desired hover text color */
+  }
+.bg-yellow-primary {
+    background-color: #fff91e; 
+}
+.bg-blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('your-background-image.jpg'); /* Replace with your background image URL */
+    filter: blur(10px); /* Adjust the blur amount as needed */
+    z-index: -1; /* Place it behind the content */
+}
+.bg-green-primary {
+    background-color: #00a693; 
+}
+.text-yellow-primary{
+    color: #fff91e;
+}
+.text-green-primary{
+    color: #00a693;
+}
+.border-yellow-primary{
+    border-color: #fff91e;
+}
+.border-green-primary {
+    border-color: #00a693;
+}
+.border-solid-yellow-primary{
+    border-color: #fff91e;
+    border-width: 2px;
+}
+.border-b-solid-yellow-primary{
+    border-color: #fff91e;
+    border-bottom: 2px;
+}
+.floating { 
+    animation-name: floating; 
+    animation-duration: 3s; 
+    animation-iteration-count: infinite; 
+    animation-timing-function: ease-in-out;
+} 
+@keyframes floating { 
+    0% { transform: translate(0, 0px); } 
+    50% { transform: translate(0, 8px); } 
+    100% { transform: translate(0, -0px); }  
+} 
+.floating-4 { 
+    animation-name: floating; 
+    animation-duration: 4s; 
+    animation-iteration-count: infinite; 
+    animation-timing-function: ease-in-out;
+} 
+@keyframes floating-4 { 
+    0% { transform: translate(0, 0px); } 
+    50% { transform: translate(0, 8px); } 
+    100% { transform: translate(0, -0px); }  
+}
+.text-darken {
+    color: #2F327D;
+}

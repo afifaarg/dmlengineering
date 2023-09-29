@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>DML Engineering</title>
+	<link rel="icon" href="./img/iconfavicon.png" type="image/x-icon">
+	<!-- Tailwind -->
+	<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+	<!-- Alpine -->
+	<script type="module" src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
+	<script nomodule src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine-ie11.min.js" defer></script>
+	<!-- AOS -->
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	<!-- Custom style -->
+	<link rel="stylesheet" href="css/home.css" />
+	<!-- Poppins font -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <div x-data="{ open: false }" class="w-full fixed z-40 text-white bg-green-primary">
+        <div class="flex flex-col max-w-screen-xl px-8 mx-auto md:items-center md:justify-between md:flex-row">
+            <div class="flex flex-row items-center justify-between py-2">
+                <div class="relative">
+                    <a href="./index.html">
+                        <img src="./img/logo_dml.png" alt="" height="120" width="120">
+                    </a>
+                </div>
+                <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
+                    <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+                        <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                        <path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+			<nav :class="{ 'hidden': !open, 'flex flex-col': open }" class="md:flex flex-col md:items-center md:pb-0 md:flex-row origin-top duration-300 md:space-x-4">
+				<a class="px-4 text-sm font-bold bg-transparent rounded-lg hover:text-[#fff91e] focus:outline-none focus:shadow-outline" href="./index.html">Home</a>
+				<a class="px-4 text-sm font-bold bg-transparent rounded-lg hover:text-yellow-primary focus:outline-none focus:shadow-outline" href="./aboutus.html">A propos</a>
+				<a class="px-4 text-sm font-bold bg-transparent rounded-lg hover:text-yellow-primary focus:outline-none focus:shadow-outline" href="./index.html#services">Nos Service</a>
+				<a class="px-4 text-sm font-bold bg-transparent rounded-lg hover:text-yellow-primary focus:outline-none focus:shadow-outline" href="./index.html#temoignage">Temoignage</a>
+				<a class="px-4 text-sm font-bold bg-transparent rounded-lg hover:text-yellow-primary focus:outline-none focus:shadow-outline" href="#contact">Contact</a>
+			</nav>	
+        </div>
+    </div>
+    <section class="bg-white shadow-lg w-full md:w-4/5 mx-auto dark:bg-gray-900">
+        <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid grid-cols-1 lg:py-16 lg:px-6">
+            <div class="grid grid-cols-1 ">
+                <img class="mt-4 w-full  rounded-lg " src= "./img/bat.webp" alt="office content 1" height="50">
+                <!-- <img class="rounded-lg absolute bottom-8 mr-4" src="./img/industriel_card.webp" alt="office content 2"> -->
+            </div>
+            <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
+                <h2 class="mb-2 py-2 text-4xl tracking-tight font-extrabold border-b-solid-yellow-primary text-green-primary dark:text-white">DML En Secteur Bâtiment</h2>
+                <div class="w-32 h-1 bg-yellow-primary mb-4"></div>
+                <p class="mb-4">DML Engineering peut également être utilisé dans le secteur du bâtiment pour la surveillance et la gestion des systèmes de bâtiment, notamment la gestion des installations, le contrôle de l'énergie, la surveillance de la sécurité et la gestion des systèmes de climatisation, de chauffage et de ventilation (CVC). </p>
+				<p class="mb-4"> Voici comment DML Engineering peut être appliqué dans le secteur du bâtiment :</p>
+                <div >
+                    <div class="flex items-center space-x-20 ">
+                        <span class="border border-gray-300 w-14 absolute"></span>
+                        <h1 class="text-gray-400 tracking-widest text-sm font-bold"> Gestion des installations :</h1>
+                    </div>
+                    <p class="text-gray-500 py-4  ">DML Engineering peut surveiller et contrôler divers aspects des installations de bâtiments, tels que l'éclairage, les systèmes de sécurité, les ascenseurs, les portes automatiques, les systèmes de contrôle d'accès, etc.</p>                  
+                </div>
+                <div >
+                    <div class="flex items-center space-x-20 ">
+                        <span class="border border-gray-300 w-14 absolute"></span>
+                        <h1 class="text-gray-400 tracking-widest text-sm font-bold"> Contrôle de l'énergie : </h1>
+                    </div>
+                    <p class="text-gray-500 my-5  "> Il peut être utilisé pour surveiller la consommation d'énergie dans les bâtiments et optimiser l'utilisation de l'énergie en ajustant automatiquement l'éclairage, le chauffage, la climatisation, etc. en fonction des besoins et des conditions.</p>                  
+                </div>
+                <div >
+                    <div class="flex items-center space-x-20 ">
+                        <span class="border border-gray-300 w-14 absolute"></span>
+                        <h1 class="text-gray-400 tracking-widest text-sm font-bold"> Surveillance de la sécurité : </h1>
+                    </div>
+                    <p class="text-gray-500 py-4  "> DML Engineering peut intégrer des systèmes de sécurité, tels que les caméras de surveillance, les systèmes d'alarme incendie et les systèmes de détection d'intrusion, pour une surveillance en temps réel et la gestion des alertes.
+                    </p>                  
+                </div>
+                <div >
+                    <div class="flex items-center space-x-20 ">
+                        <span class="border border-gray-300 w-14 absolute"></span>
+                        <h1 class="text-gray-400 tracking-widest text-sm font-bold">Gestion des données : </h1>
+                    </div>
+                    <p class="text-gray-500 py-4  ">  DML Engineering peut collecter et analyser des données sur les performances des systèmes de bâtiment, permettant ainsi une maintenance préventive et une optimisation continue.
+                    </p>                  
+                </div>
+                <div >
+                    <div class="flex items-center space-x-20 ">
+                        <span class="border border-gray-300 w-14 absolute"></span>
+                        <h1 class="text-gray-400 tracking-widest text-sm font-bold"> Gestion des bâtiments intelligents :</h1>
+                    </div>
+                    <p class="text-gray-500 py-4  "> DML Engineering peut être intégré à des systèmes de gestion des bâtiments intelligents pour offrir une solution complète de contrôle et de surveillance des bâtiments.
+                    </p>                  
+                </div>
+                <div >
+                    <div class="flex items-center space-x-20 ">
+                        <span class="border border-gray-300 w-14 absolute"></span>
+                        <h1 class="text-gray-400 tracking-widest text-sm font-bold"> Efficacité énergétique :</h1>
+                    </div>
+                    <p class="text-gray-500 py-4  ">  Il peut aider les propriétaires et les gestionnaires de bâtiments à atteindre des objectifs d'efficacité énergétique, réduisant ainsi les coûts opérationnels et l'impact environnemental.
+                    </p>                  
+                </div>
+                <div >
+                    <div class="flex items-center space-x-20 ">
+                        <span class="border border-gray-300 w-14 absolute"></span>
+                        <h1 class="text-gray-400 tracking-widest text-sm font-bold"> Personnalisation :</h1>
+                    </div>
+                    <p class="text-gray-500 py-4  ">	
+						DML Engineering peut être configuré pour répondre aux besoins spécifiques de chaque bâtiment, que ce soit un immeuble de bureaux, un hôpital, un centre commercial ou une résidence.		   
+                    </p>                  
+                </div>
+				<p class=" mt-4">Dans le secteur du bâtiment, l'objectif principal de l'utilisation de DML Engineering est d'améliorer la gestion des installations, d'optimiser l'utilisation de l'énergie, d'assurer la sécurité des occupants et de fournir un environnement confortable tout en réduisant les coûts d'exploitation. Il peut être utilisé dans une variété de types de bâtiments pour améliorer l'efficacité opérationnelle et le confort des occupants.</p>   
+            </div>
+			 
+		
+			​
+        </div>
+    </section>
+   
+    <footer class=" bg-green-primary px-4" >
+		<div class="max-w-3xl mx-auto">
+			<div class="flex py-12 justify-center text-white items-center px-20 sm:px-36">
+				<div class="relative px-2">
+					<img src="./img/logo_dml.png" alt="" height="240" width="240">
+				</div>
+				<span class="border-l border-gray-500 text-sm pl-5  px-2 py-2 font-semibold">DML Engineering</span>
+			</div>
+			<div class="text-center pb-16 pt-5">
+				<label class="text-white font-bold text-xl">Contactez Nous</label>
+				<form action="#" method="post" >
+					<div class="mb-4">
+					  <label for="name" class="block text-left text-white">Nom & Prenom</label>
+					  <input type="text" id="name" name="name" class="w-full border-gray-300 rounded-lg px-4 py-2" placeholder="Votre Nom & Prenom" required />
+					</div>
+					<div class="mb-4">
+					  <label for="email" class="block text-left text-white">Email</label>
+					  <input type="email" id="email" name="email" class="w-full border-gray-300 rounded-lg px-4 py-2" placeholder="Votre Email" required />
+					</div>
+					<div class="mb-6">
+					  <label for="message" class="block text-left text-white">Message</label>
+					  <textarea id="message" name="message" rows="4" class="w-full border-gray-300 rounded-lg px-4 py-2" placeholder="Votre Message" required></textarea>
+					</div>
+					<div class="text-center">
+					  <button type="submit" class=" hover:border border-y-yellow-primary text-white rounded-lg px-6 py-2 ">Envoyer</button>
+					</div>
+				  </form>
+			</div>
+			<div class="flex flex-col md:flex-row items-start md:items-center w-full text-white text-sm md:justify-center">
+				<a href="" class=" py-2 pl-4 w-64 border-l border-white md:border-none"> <svg width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><rect width='24' height='24' stroke='none' fill='#000000' opacity='0'/>
+
+
+			<g transform="matrix(0.16 0 0 0.16 12 12)" >
+			<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(255,255,255); fill-rule: nonzero; opacity: 1;" transform=" translate(-64, -63.75)" d="M 109 0.80078125 C 107.3 0.80078125 106 2.1007813 106 3.8007812 L 106 14 C 106 15.7 107.3 17 109 17 C 110.7 17 112 15.7 112 14 L 112 3.8007812 C 112 2.1007812 110.7 0.80078125 109 0.80078125 z M 46.949219 1.0742188 C 35.199219 1.0742187 23.45 5.55 14.5 14.5 C 1.1 27.8 -2.6992188 47.699609 4.8007812 65.099609 L 4.9003906 65.300781 C 11.800391 81.400781 22.799609 95.699609 36.599609 106.59961 L 37.800781 107.59961 C 40.400781 109.69961 43.699609 110.80078 47.099609 110.80078 C 50.299609 110.70078 53.499609 109.59922 56.099609 107.69922 C 70.599609 96.599219 82.100781 81.8 89.300781 65 C 96.700781 47.7 92.800391 27.8 79.400391 14.5 C 70.450391 5.55 58.699219 1.0742188 46.949219 1.0742188 z M 47 7 C 57.2 7 67.399219 10.899219 75.199219 18.699219 C 86.799219 30.299219 90.200781 47.599609 83.800781 62.599609 C 77.000781 78.499609 66.2 92.400391 52.5 102.90039 C 50.9 104.10039 48.999609 104.69922 47.099609 104.69922 C 45.099609 104.69922 43.1 104.00078 41.5 102.80078 L 40.300781 101.80078 C 27.300781 91.600781 17.000391 78.100391 10.400391 62.900391 L 10.300781 62.699219 C 3.8007812 47.599219 7.0992188 30.299219 18.699219 18.699219 C 26.499219 10.899219 36.7 7 47 7 z M 47 27 C 36 27 27 36 27 47 C 27 58 36 67 47 67 C 58 67 67 58 67 47 C 67 36 58 27 47 27 z M 109 31 C 107.3 31 106 32.3 106 34 L 106 61.199219 C 106 66.499219 109.70078 69.4 112.30078 71.5 C 114.60078 73.3 116 74.499219 116 76.199219 C 116 77.999219 110.5 79.299609 106.5 80.099609 C 99.6 81.699609 91 83.599219 91 91.199219 C 91 97.799219 99.1 100.5 107 103 C 113.5 105.1 121 107.49922 121 111.19922 C 121 120.09922 79 120.49922 61 120.69922 L 46.5 120.69922 L 41 120.69922 C 39.3 120.69922 38 121.99922 38 123.69922 C 38 125.39922 39.3 126.69922 41 126.69922 L 46.5 126.69922 L 55 126.69922 L 61.099609 126.69922 C 110.99961 126.19922 127 122.39922 127 111.19922 C 127 103.09922 117.40039 100.00078 108.90039 97.300781 C 104.20039 95.800781 97 93.499219 97 91.199219 C 97 88.599219 101.70078 87.4 107.80078 86 C 114.50078 84.5 122 82.899219 122 76.199219 C 122 71.499219 118.69961 68.900781 116.09961 66.800781 C 113.49961 64.700781 112 63.499219 112 61.199219 L 112 34 C 112 32.3 110.7 31 109 31 z M 47 33 C 54.7 33 61 39.3 61 47 C 61 54.7 54.7 61 47 61 C 39.3 61 33 54.7 33 47 C 33 39.3 39.3 33 47 33 z" stroke-linecap="round" />
+			</g>
+			</svg>CyberParc de Sidi Abdellah, Rahmania, Algérie</a>
+
+				<a href="" class="border-l border-white w-64 pl-4 py-2">
+					<svg id='Phone_24' width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><rect width='24' height='24' stroke='none' fill='#000000' opacity='0'/>
+
+
+						<g transform="matrix(0.48 0 0 0.48 12 12)" >
+						<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(255,255,255); fill-rule: nonzero; opacity: 1;" transform=" translate(-25, -24.99)" d="M 14 3.9902344 C 8.4886661 3.9902344 4 8.4789008 4 13.990234 L 4 35.990234 C 4 41.501568 8.4886661 45.990234 14 45.990234 L 36 45.990234 C 41.511334 45.990234 46 41.501568 46 35.990234 L 46 13.990234 C 46 8.4789008 41.511334 3.9902344 36 3.9902344 L 14 3.9902344 z M 14 5.9902344 L 36 5.9902344 C 40.430666 5.9902344 44 9.5595687 44 13.990234 L 44 35.990234 C 44 40.4209 40.430666 43.990234 36 43.990234 L 14 43.990234 C 9.5693339 43.990234 6 40.4209 6 35.990234 L 6 13.990234 C 6 9.5595687 9.5693339 5.9902344 14 5.9902344 z M 18.048828 11.035156 C 16.003504 10.946776 14.45113 11.723922 13.474609 12.658203 C 12.986349 13.125343 12.633832 13.625179 12.392578 14.091797 C 12.151324 14.558415 11.998047 14.943108 11.998047 15.443359 C 11.998047 15.398799 11.987059 15.632684 11.980469 15.904297 C 11.973869 16.17591 11.97507 16.542045 12 16.984375 C 12.04996 17.869036 12.199897 19.065677 12.597656 20.484375 C 13.393174 23.321771 15.184446 27.043821 19.070312 30.929688 C 22.95618 34.815554 26.678014 36.606575 29.515625 37.402344 C 30.93443 37.800228 32.130881 37.949937 33.015625 38 C 33.457997 38.02503 33.822105 38.026091 34.09375 38.019531 C 34.365395 38.012931 34.601049 38.001953 34.556641 38.001953 C 35.056892 38.001953 35.441585 37.848676 35.908203 37.607422 C 36.374821 37.366168 36.874657 37.013651 37.341797 36.525391 C 38.276078 35.54887 39.053222 33.996496 38.964844 31.951172 C 38.922907 30.975693 38.381316 30.111858 37.582031 29.599609 C 36.96435 29.203814 36.005458 28.589415 34.753906 27.789062 C 33.301811 26.861299 31.44451 26.795029 29.929688 27.625 L 30.015625 27.582031 L 28.837891 28.087891 L 28.751953 28.148438 C 28.465693 28.349428 28.111154 28.386664 27.789062 28.251953 C 26.886813 27.874649 25.480985 27.133329 24.173828 25.826172 C 22.866671 24.519015 22.125351 23.113186 21.748047 22.210938 C 21.613336 21.888845 21.650568 21.534307 21.851562 21.248047 L 21.912109 21.162109 L 22.417969 19.984375 L 22.375 20.070312 C 23.204764 18.555868 23.140248 16.698619 22.210938 15.246094 C 21.410584 13.994542 20.796186 13.03565 20.400391 12.417969 C 19.888142 11.618684 19.02431 11.077096 18.048828 11.035156 z M 17.962891 13.033203 C 18.243409 13.045263 18.533045 13.209378 18.716797 13.496094 C 19.113001 14.114413 19.727696 15.07377 20.527344 16.324219 C 21.058033 17.153694 21.09533 18.243821 20.621094 19.109375 L 20.597656 19.152344 L 20.115234 20.279297 L 20.214844 20.097656 C 19.623835 20.939396 19.505055 22.032514 19.902344 22.982422 C 20.35304 24.060173 21.214923 25.695392 22.759766 27.240234 C 24.304608 28.785077 25.939827 29.64696 27.017578 30.097656 C 27.967486 30.494945 29.060604 30.376165 29.902344 29.785156 L 29.720703 29.884766 L 30.847656 29.402344 L 30.890625 29.378906 C 31.755801 28.904877 32.845877 28.944375 33.675781 29.474609 L 33.675781 29.472656 C 34.92623 30.272304 35.885587 30.886999 36.503906 31.283203 C 36.790622 31.466955 36.954736 31.756591 36.966797 32.037109 C 37.032417 33.555785 36.504954 34.506599 35.896484 35.142578 C 35.59225 35.460568 35.262335 35.691348 34.990234 35.832031 C 34.718133 35.972715 34.457889 36.001953 34.556641 36.001953 C 34.373232 36.001953 34.276633 36.013981 34.046875 36.019531 C 33.817117 36.025131 33.509144 36.025436 33.128906 36.003906 C 32.368431 35.960876 31.318757 35.831053 30.054688 35.476562 C 27.526547 34.767581 24.137509 33.168759 20.484375 29.515625 C 16.831241 25.862491 15.232169 22.473167 14.523438 19.945312 C 14.169071 18.681386 14.039037 17.631464 13.996094 16.871094 C 13.974624 16.490908 13.974899 16.18286 13.980469 15.953125 C 13.986069 15.72339 13.998047 15.626918 13.998047 15.443359 C 13.998047 15.542109 14.027287 15.281867 14.167969 15.009766 C 14.308652 14.737665 14.539432 14.40775 14.857422 14.103516 C 15.493401 13.495046 16.444215 12.967581 17.962891 13.033203 z" stroke-linecap="round" />
+						</g>
+						</svg>
+					Tél. +213 550 25 71 29</a>
+				<a href="" class="border-l border-white pl-4 w-64 py-2">
+					<svg id='Send_Email_24' width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><rect width='24' height='24' stroke='none' fill='#000000' opacity='0'/>
+
+
+						<g transform="matrix(0.41 0 0 0.41 12 12)" >
+						<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(255,255,255); fill-rule: nonzero; opacity: 1;" transform=" translate(-24.21, -24.51)" d="M 0.00390625 3 L 0.00390625 35 L 2 35 L 2 5 L 45 5 L 45 3 Z M 4 7 L 4 39 L 27 39 L 27 37 L 6 37 L 6 34.980469 L 18.808594 24.851563 C 19.84375 25.757813 21.757813 27.421875 22 27.632813 C 23.523438 28.960938 25.140625 29.296875 26.175781 29.296875 C 27.210938 29.296875 28.828125 28.960938 30.355469 27.632813 C 31.539063 26.601563 43.179688 16.453125 46 13.996094 L 46 31 L 48 33 L 48 7 Z M 6 9 L 46 9 L 46 11.34375 C 44.964844 12.246094 30.3125 25.019531 29.042969 26.125 C 27.921875 27.101563 26.78125 27.296875 26.175781 27.296875 C 25.570313 27.296875 24.433594 27.097656 23.3125 26.125 C 22.007813 24.988281 6.441406 11.421875 6 11.035156 Z M 6 13.6875 C 7.695313 15.167969 12.71875 19.546875 17.273438 23.515625 L 6 32.429688 Z M 39.988281 29.988281 C 39.582031 29.992188 39.21875 30.238281 39.0625 30.613281 C 38.910156 30.992188 39 31.421875 39.292969 31.707031 L 44.585938 37 L 31 37 L 31 39 L 44.585938 39 L 39.292969 44.292969 C 39.03125 44.542969 38.925781 44.917969 39.019531 45.265625 C 39.109375 45.617188 39.382813 45.890625 39.734375 45.980469 C 40.082031 46.074219 40.457031 45.96875 40.707031 45.707031 L 48.414063 38 L 40.707031 30.292969 C 40.519531 30.097656 40.261719 29.992188 39.988281 29.988281 Z" stroke-linecap="round" />
+						</g>
+						</svg>
+					E-mail. dml.engine@gmail.com
+				</a>
+			</div>
+			
+		</div>
+	</footer>
+    
+    
+    <!-- AOS init -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+    	AOS.init();
+    </script>
+</body>
